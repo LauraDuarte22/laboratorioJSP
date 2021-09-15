@@ -13,8 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-
-        <jsp:useBean id="clock" class="java.util.Date"/>
+        <jsp:useBean id="clock" class="java.util.Date"/> 
         <c:choose>
             <c:when test="${clock.hours<12}">
                 Buenos días
@@ -26,16 +25,12 @@
                 Buenas noches
             </c:when>
         </c:choose>
+                
         <jsp:useBean id="myBean" scope="session" class="co.edu.unipiloto.userHandler" />
         <jsp:setProperty name="myBean" property="name"/>
         <jsp:getProperty name="myBean" property="name" />
-        <jsp:useBean id="ageBean" scope="session" class="co.edu.unipiloto.userHandler" />
-        <jsp:setProperty name="ageBean" property="date" />
+        <jsp:setProperty name="myBean" property="date" />
         tu edad es : 
-        <jsp:getProperty name="ageBean" property="date" />
-
-
-
-
+        <jsp:getProperty name="myBean" property="date" />
     </body>
 </html>
